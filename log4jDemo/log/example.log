@@ -1,0 +1,3 @@
+INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Entering application.
+DEBUG main com.foo.Bar - Did it again!
+INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Exiting application.
