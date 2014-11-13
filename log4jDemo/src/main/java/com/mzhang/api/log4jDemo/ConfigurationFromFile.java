@@ -8,6 +8,9 @@ import com.foo.Bar;
 public class ConfigurationFromFile {
   static Logger logger = Logger.getLogger(ConfigurationFromFile.class.getName());
 
+  /**
+   * @param args
+   */
   public static void main(String[] args) {
     // BasicConfigurator.configure();
     // BasicConfigurator replaced with PropertyConfigurator.

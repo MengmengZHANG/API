@@ -1,3 +1,6 @@
-INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Entering application.
-DEBUG main com.foo.Bar - Did it again!
-INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Exiting application.
+2014-11-13 11:22:41,532 INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Entering application.
+2014-11-13 11:22:41,534 DEBUG main com.foo.Bar - Did it again!
+2014-11-13 11:22:41,534 INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Exiting application.
+2014-11-13 11:22:44,047 INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Entering application.
+2014-11-13 11:22:44,049 DEBUG main com.foo.Bar - Did it again!
+2014-11-13 11:22:44,049 INFO main com.mzhang.api.log4jDemo.ConfigurationFromFile - Exiting application.
