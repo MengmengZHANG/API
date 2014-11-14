@@ -7,18 +7,31 @@ import lombok.Data;
 
 @Data
 public class Course {
+  private String name;
+
+  private List<String> modules;
+
   private Person professor;
 
   private List<Student> students;
 
   public Course(){
     students = new ArrayList<Student>();
+    modules = new ArrayList<String>();
   }
 
   public void addStudent(Student stu) {
     students.add(stu);
   }
 
+  public void addModule(String moduleName) {
+    this.modules.add(moduleName);
+  }
+
+  public void changeModuleName(String oldName, String newName) {
+    int index = this.modules.indexOf(oldName);
+    this.modules.set(index, newName);
+  }
   /**
    * @param args
    * @throws CloneNotSupportedException
