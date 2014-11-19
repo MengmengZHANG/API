@@ -19,3 +19,7 @@ https://stackoverflow.com/questions/2156120/java-recommended-solution-for-deep-c
 >RealTime
 
 Pusher:  https://app.pusher.com/
+
+>Weather
+
+YahooWeather_yql: https://developer.yahoo.com/weather/?dataTypeRadios=JSON
