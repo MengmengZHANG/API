@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    html,
+    body,
+    #map-canvas {
+      height: 400px;
+
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script type="text/javascript" src="properties.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=" + "APIKEY">
+  </script>
+  <script type="text/javascript">
+    function initialize() {
+      var mapOptions = {
+        center: {
+          lat: 40.4427836,
+          lng: -79.9430933
+        },
+        zoom: 17
+      };
+      var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  <script type="text/javascript" src='weather.js'></script>
+</head>
+
+<body>
+  <table style="width:100%">
+    <tr>
+      <td style="width:50%" hidden>
+        <h3>Demo1 for google map</h3>
+        <div id="map-canvas"></div>
+      </td>
+      <td style="width:50%; padding-left: 5%; vertical-align: top;"  hidden>
+        <h3>Demo2 for yahoo weather</h3>
+        <div id="weather-description"></div>
+      </td>
+    </tr>
+    <script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='Carnegie Mellon University,Pittsburgh, USA') AND u='c'&format=json&callback=yqlCallback"></script>
+</body>
+
+</html>

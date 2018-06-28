@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+	<script type="text/javascript"
+      src="properties.js">
+    </script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=" + APIKEY>
+    </script>  
+  </head>
+  <body>
+	<div id="weather-description"></div>
+	<div id="map-canvas"></div>
+	<script type="text/javascript" src='map.js'></script>
+	<script type="text/javascript" src='weather.js'></script>
+	<script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='dezhou,china') AND u='c'&format=json&callback=yqlCallback"></script>
+	<script>
+		var map = initialize(116.28,37.45);
+	</script>
+	
+  </body>
+</html>
